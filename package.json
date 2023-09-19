@@ -1,0 +1,30 @@
+{
+  "name": "custom-folder-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node --loader ts-node/esm ../src/cli.ts init",
+    "cleanup": "rm -r ./test/test-folder && rm ./test/tailwind.config.js && npm uninstall tailwindcss"
+  },
+  "bin": {
+    "my-ts-hello-world-cli": "./dist/index.js",
+    "test-cli": "./dist/cli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^20.6.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "inquirer": "^9.2.11",
+    "ts-node": "^10.9.1"
+  }
+}
