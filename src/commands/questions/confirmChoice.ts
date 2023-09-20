@@ -1,8 +1,8 @@
 import inquirer from "inquirer";
 import QuestionTitles from "../../models/QuestionTitles.type.ts";
 import IChoice from "../../models/Choice.type.ts";
-import getFormatedTitle from "../../utils/getFormatedTitle.ts";
-import titleLookup from "../../utils/titleLookup.ts";
+import getFormatedTitle from "../../utils/questions/getFormatedTitle.ts";
+import titleLookup from "../../utils/questions/titleLookup.ts";
 
 const confirmChoices = async (choices: IChoice): Promise<boolean> => {
   console.log("Here are your current answers:");

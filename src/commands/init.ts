@@ -1,11 +1,11 @@
+import chalk from "chalk";
 import inquirer from "inquirer";
 import { execSync } from "child_process";
 import askQuestions from "./questions/askQuestions.ts";
 import QuestionTitles from "../models/QuestionTitles.type.ts";
 import confirmChoices from "./questions/confirmChoice.ts";
-import titleLookup from "../utils/titleLookup.ts";
+import titleLookup from "../utils/questions/titleLookup.ts";
 import createFolderStructure from "./shell-commands/createFolderStructure.ts";
-import installTailwind from "./shell-commands/installTailwind.ts";
 import installPackages from "./shell-commands/installPackages.ts";
 import installReact from "./shell-commands/installReact.ts";
 
@@ -69,14 +69,17 @@ const initCommand = async () => {
       },
     },
   ]);
-  console.log(
-    "🚀 ~ file: init.ts:55 ~ initCommand ~ projectNameAnswer:",
-    projectNameAnswer
-  );
+
   await installReact(answers, projectNameAnswer.projectName);
   await installPackages(answers, projectNameAnswer.projectName);
-  // installTailwind();
-  // createFolderStructure();
+  createFolderStructure(answers, projectNameAnswer.projectName);
+  console.log(
+    chalk.green("Everything is complete!"),
+    "\n",
+    "\n",
+    "\n",
+    chalk.magenta(`cd into ${projectNameAnswer.projectName} to get started!`)
+  );
 };
 
 export default initCommand;

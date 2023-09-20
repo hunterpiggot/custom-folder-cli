@@ -1,6 +1,7 @@
 import { exec } from "child_process";
 import IChoice from "../../models/Choice.type";
-import executeCommand from "../../utils/executeCommand.ts";
+import executeCommand from "../../utils/shell-commands/executeCommand.ts";
+import chalk from "chalk";
 
 const installReact = async (packages: IChoice, projectName: string) => {
   const finalCommand = [""];
@@ -21,10 +22,10 @@ const installReact = async (packages: IChoice, projectName: string) => {
     }
   }
 
-  console.log("=======================");
-  console.log("INSTALLING REACT");
+  console.log(chalk.cyan("======================="));
+  console.log(chalk.bgCyan("INSTALLING REACT"));
   await executeCommand(finalCommand.join(" ").trim());
-  console.log("=======================");
+  console.log(chalk.cyan("======================="));
 };
 
 export default installReact;

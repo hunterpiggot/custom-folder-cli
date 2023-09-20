@@ -1,5 +1,6 @@
+import chalk from "chalk";
 import IChoice from "../../models/Choice.type";
-import executeCommand from "../../utils/executeCommand.ts";
+import executeCommand from "../../utils/shell-commands/executeCommand.ts";
 
 const packageLookup = {
   tailwindcss:
@@ -18,14 +19,14 @@ const installPackages = async (answers: IChoice, projectName: string) => {
     finalCommand.push(packageLookup["redux"]);
   }
 
-  console.log("=======================");
-  console.log("INSTALLING PACKAGES");
+  console.log(chalk.yellowBright("======================="));
+  console.log(chalk.bgYellowBright("INSTALLING PACKAGES"));
   await executeCommand(
     `cd ${projectName} && ${finalCommand.join(" ").trim()} && ${finalDevCommand
       .join(" ")
       .trim()}`
   );
-  console.log("=======================");
+  console.log(chalk.yellowBright("======================="));
 };
 
 export default installPackages;

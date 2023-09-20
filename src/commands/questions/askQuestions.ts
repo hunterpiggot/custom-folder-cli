@@ -1,6 +1,6 @@
 import inquirer from "inquirer";
 import QuestionTitles from "../../models/QuestionTitles.type.ts";
-import allQuestions from "../../utils/allQuestions.ts";
+import allQuestions from "../../utils/questions/allQuestions.ts";
 import IChoice from "../../models/Choice.type.ts";
 
 const askQuestions = async (questions: QuestionTitles[]): Promise<IChoice> => {

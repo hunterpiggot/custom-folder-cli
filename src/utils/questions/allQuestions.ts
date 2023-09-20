@@ -25,16 +25,16 @@ const allQuestions = {
     message: "What folder structure would you like?",
     choices: [
       {
+        name: "default",
+        value: "default",
+      },
+      {
         name: "Choice A",
         value: "a",
       },
       {
         name: "Choice B",
         value: "b",
-      },
-      {
-        name: "Choice C",
-        value: "c",
       },
     ],
   },
