@@ -45,11 +45,11 @@ const folderStructureTypeA: IFolderStructure[] = [
             type: "folder",
             children: [
               {
-                name: "UserAccountApiClient.interface.txt",
+                name: "UserAccountApiClient.interface.ts",
                 type: "file",
               },
               {
-                name: "UserAccountApiClient.model.txt",
+                name: "UserAccountApiClient.model.ts",
                 type: "file",
               },
               {
