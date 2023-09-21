@@ -1,6 +1,6 @@
 import chalk from "chalk";
-import IChoice from "../../models/Choice.type";
-import executeCommand from "../../utils/shell-commands/executeCommand.ts";
+import IChoice from "../../models/Choice.type.js";
+import executeCommand from "../../utils/shell-commands/executeCommand.js";
 
 const packageLookup = {
   tailwindcss:

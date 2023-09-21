@@ -1,4 +1,4 @@
-import IFolderStructure from "../../models/FolderStructure.interface.ts";
+import IFolderStructure from "../../models/FolderStructure.interface.js";
 
 const folderStructureTypeB: IFolderStructure[] = [
   {

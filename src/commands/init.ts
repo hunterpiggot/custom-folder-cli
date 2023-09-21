@@ -1,13 +1,13 @@
 import chalk from "chalk";
 import inquirer from "inquirer";
 import { execSync } from "child_process";
-import askQuestions from "./questions/askQuestions.ts";
-import QuestionTitles from "../models/QuestionTitles.type.ts";
-import confirmChoices from "./questions/confirmChoice.ts";
-import titleLookup from "../utils/questions/titleLookup.ts";
-import createFolderStructure from "./shell-commands/createFolderStructure.ts";
-import installPackages from "./shell-commands/installPackages.ts";
-import installReact from "./shell-commands/installReact.ts";
+import askQuestions from "./questions/askQuestions.js";
+import QuestionTitles from "../models/QuestionTitles.type.js";
+import confirmChoices from "./questions/confirmChoice.js";
+import titleLookup from "../utils/questions/titleLookup.js";
+import createFolderStructure from "./shell-commands/createFolderStructure.js";
+import installPackages from "./shell-commands/installPackages.js";
+import installReact from "./shell-commands/installReact.js";
 
 const initCommand = async () => {
   const baseQuestions: QuestionTitles[] = [

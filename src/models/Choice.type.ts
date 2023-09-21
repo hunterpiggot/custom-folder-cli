@@ -1,4 +1,4 @@
-import QuestionTitles from "./QuestionTitles.type";
+import QuestionTitles from "./QuestionTitles.type.js";
 
 type IChoice = {
   [key in QuestionTitles]: boolean | string;

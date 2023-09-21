@@ -1,11 +1,11 @@
 import chalk from "chalk";
 import fs from "fs";
 import path from "path";
-import recursiveCreateFolderStructure from "../../utils/shell-commands/recursiveCreateFolderStructure.ts";
-import folderStructureTypeA from "../../utils/file-structures/folderStructureTypeA.ts";
-import folderStructureTypeB from "../../utils/file-structures/folderStructureTypeB.ts";
-import IChoice from "../../models/Choice.type.ts";
-import IFolderStructure from "../../models/FolderStructure.interface.ts";
+import recursiveCreateFolderStructure from "../../utils/shell-commands/recursiveCreateFolderStructure.js";
+import folderStructureTypeA from "../../utils/file-structures/folderStructureTypeA.js";
+import folderStructureTypeB from "../../utils/file-structures/folderStructureTypeB.js";
+import IChoice from "../../models/Choice.type.js";
+import IFolderStructure from "../../models/FolderStructure.interface.js";
 
 const createFolderStructure = (answers: IChoice, projectName: string) => {
   let folderStructure: IFolderStructure[] = [];

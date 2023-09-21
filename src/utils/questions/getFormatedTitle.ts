@@ -1,4 +1,4 @@
-import allQuestions from "./allQuestions";
+import allQuestions from "./allQuestions.js";
 
 const getFormatedTitle = (
   question: keyof typeof allQuestions,
